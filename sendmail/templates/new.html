@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Issues Classified Demo Table</title>
+        <style>
+                h1 { text-align: center; margin-top: 5%;}
+                table {
+                    width: 60%;
+                    margin-left: 20%;
+                    border: 1px solid #444444;
+                    border-collapse: collapse;
+                }
+                th, td {
+                    border: 1px solid #444444;
+                    padding: 10px;
+                }
+                .cen{ text-align: center; width: 100px;  }
+            </style>
+    </head>
+    <body>
+        <h1>Issues Classified Demo Table</h1>
+        <table>
+            <thead>     
+                <tr>
+                    <th>Document</th>
+                    <th class="cen">#Issue</th>
+                    <th>Html Path</th>
+                </tr>
+            </thead>
+            {% for a, b in data.items %}
+            <tbody>
+                <tr>
+                    <th>{{a}}</th>
+                    <br>
+                    <td class="cen">{{b.0}}</td>
+                    <br>
+                    <td>{% for c in b.1 %}
+                            <a href="{{c}}">{{c}}</a><br>
+                        {% endfor %}
+                    </td>
+                </tr>   
+            </tbody>  
+            {% endfor %}  
+        </table>
+    </body>
+</html>
