@@ -71,7 +71,7 @@ def sendmail(request):
     #f = open("project_name.html", 'w')
 
     mail_title = "Project_Name___{0}____".format(project_name)
-    mail_body = 'User_Manual : ' + user_manual + '\n' + 'Issue_Data : ' + issue_data + '\n' + 'Result : ' + 'http://127.0.0.1:8000/result/'
+    mail_body = 'User_Manual : ' + user_manual + '\n' + 'Issue_Data : ' + issue_data + '\n' + 'Result : ' + 'http://127.0.0.1:8000/result/' + "<p>sljdskfjsl</p>"
 
     if project_name and user_manual and issue_data and e_mail :
         try:
